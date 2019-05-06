@@ -1,0 +1,21 @@
+{
+  "name": "wdio-first",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "^4.14.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "wdio-cucumber-framework": "^2.2.8",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "^0.1.5"
+  }
+}
