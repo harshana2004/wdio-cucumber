@@ -10,7 +10,8 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './e2e/features/**/*.feature'
+        './e2e/features/developer-guide.feature',
+        './e2e/features/shopping-cart.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -42,7 +43,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome'
     }],
@@ -58,7 +59,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'data',
+    logLevel: 'silent',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -145,8 +146,7 @@ exports.config = {
     },
     
     before: function () {
-        //browser.windowHandleMaximize();
-        const chai = require('chai');;
+        const chai = require('chai');
         global.expect = chai.expect;
         global.assert = chai.assert;
         global.should = chai.should();
